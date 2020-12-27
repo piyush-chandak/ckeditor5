@@ -11,6 +11,9 @@ import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapte
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Undeline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
@@ -29,6 +32,19 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+import HighlightCommand from '@ckeditor/ckeditor5-highlight/src/highlightcommand';
+import HighlightEditing from '@ckeditor/ckeditor5-highlight/src/highlightediting';
+import HighlightUI from '@ckeditor/ckeditor5-highlight/src/highlightui';
+
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+
+import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
+import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency';
+import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-characters/src/specialcharactersmathematical';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -56,7 +72,19 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	Alignment,
+	Highlight,
+	HighlightCommand,
+	HighlightEditing,
+	HighlightUI,
+	Undeline,
+	Strikethrough,
+	Code,
+	CodeBlock,
+	SpecialCharacters,
+	SpecialCharactersCurrency,
+	SpecialCharactersMathematical
 ];
 
 // Editor configuration.
@@ -67,17 +95,26 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
-			'link',
+			'underline',
+			'strikethrough',
 			'bulletedList',
 			'numberedList',
+			'alignment',
+			'blockQuote',
 			'|',
 			'indent',
 			'outdent',
 			'|',
+			'code',
+			'codeBlock',
+			'|',
+			'specialCharacters',
+			'link',
+			'highlight',
 			'imageUpload',
-			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
+			'|',
 			'undo',
 			'redo'
 		]
